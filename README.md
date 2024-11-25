@@ -12,3 +12,11 @@ The project promotes disaster resilience and safe living environments. By notify
 
 Local Impact: 
 Flood-prone areas stand to benefit directly from this system as it empowers individuals and families to take action in the face of potential flooding, reducing the severity of damages and enhancing community readiness.
+
+# Component Used
+* Arduino uno R3
+* Breadboard
+* 3 LED (red,green,yellow)
+* Buzzer
+* Jumper wires
+* Water level sensor
