@@ -18,6 +18,7 @@ Flood-prone areas stand to benefit directly from this system as it empowers indi
 * Breadboard
 * 3 LED (red,green,yellow)
 * Buzzer
+* Ressitor
 * Jumper wires
 * Water level sensor
 
