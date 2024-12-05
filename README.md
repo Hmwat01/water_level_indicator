@@ -11,7 +11,7 @@ Flooding is a recurring issue in many areas, especially during heavy rain or typ
 * Breadboard
 * 3 LED (red,green,yellow)
 * Buzzer
-* Ressitor
+* Resitor
 * Jumper wires
 * Water level sensor
 
