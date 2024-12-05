@@ -1,7 +1,7 @@
-Introduction
+Introduction:
 This Arduino project uses a water level sensor to detect the water level and provide feedback via LEDs and a buzzer. The system indicates the water level using three thresholds (Green, Yellow, Red) and triggers a buzzer when the water reaches a critical level (Red).
 
-Hardware Requirements
+Hardware Requirements:
 Arduino board
 Water level sensor
 3 LEDs (Green, Yellow, Red)
@@ -9,47 +9,46 @@ Buzzer
 Resistors (as required for LEDs)
 Connecting wires
 Breadboard (optional)
-Pin Assignments
-  
-Sensor Input: Analog pin A0 reads data from the water level sensor.
-Green LED: Digital pin 2 indicates a low water level.
-Yellow LED: Digital pin 3 indicates a medium water level.
-Red LED: Digital pin 4 indicates a high water level.
-Buzzer: Digital pin 5 is triggered at critical water levels.
+
+Pin Assignments:
+-Sensor Input: Analog pin A0 reads data from the water level sensor.
+-Green LED: Digital pin 2 indicates a low water level.
+-Yellow LED: Digital pin 3 indicates a medium water level.
+-Red LED: Digital pin 4 indicates a high water level.
+-Buzzer: Digital pin 5 is triggered at critical water levels.
   
 Code Description
 Constants
 Thresholds:
-greenThreshold (300): Minimum value for triggering the Green LED.
-yellowThreshold (500): Minimum value for triggering the Yellow LED.
-redThreshold (600): Minimum value for triggering the Red LED and the buzzer.
+-greenThreshold (300): Minimum value for triggering the Green LED.
+-yellowThreshold (500): Minimum value for triggering the Yellow LED.
+-redThreshold (600): Minimum value for triggering the Red LED and the buzzer.
 Averaging Setup:
-numReadings (10): Number of sensor readings averaged for more stable output.
+-numReadings (10): Number of sensor readings averaged for more stable output.
   
 Variables
-readings[numReadings]: Array to store sensor values.
-readIndex: Tracks the current index in the readings array.
-total: Stores the sum of all sensor readings.
-average: Calculates the average sensor reading.
+-readings[numReadings]: Array to store sensor values.
+-readIndex: Tracks the current index in the readings array.
+-total: Stores the sum of all sensor readings.
+-average: Calculates the average sensor reading.
   
 Workflow
-Setup Phase
+1. Setup Phase
+-Initialize all LEDs and the buzzer as output pins.
+-Set up the readings array with initial values of 0.
+-Start the serial communication for debugging.
 
-Initialize all LEDs and the buzzer as output pins.
-Set up the readings array with initial values of 0.
-Start the serial communication for debugging.
-Main Loop
+2. Main Loop
+-Read sensor data from the water level sensor (analogRead(A0)).
+-Update the readings array and calculate a moving average for smoother sensor values.
+-Print the averaged value to the serial monitor for debugging.
 
-Read sensor data from the water level sensor (analogRead(A0)).
-Update the readings array and calculate a moving average for smoother sensor values.
-Print the averaged value to the serial monitor for debugging.
-LED and Buzzer Logic
+3. LED and Buzzer Logic
+- Compare the average sensor value with the thresholds:
+-Red Threshold: If the average >= redThreshold, turn on the Red LED and buzzer.
+-Yellow Threshold: If the average >= yellowThreshold, turn on the Yellow LED.
+-Green Threshold: If the average >= greenThreshold, turn on the Green LED.
+-No Water Detected: If the average is below all thresholds, turn off all indicators.
 
-Compare the average sensor value with the thresholds:
-Red Threshold: If the average >= redThreshold, turn on the Red LED and buzzer.
-Yellow Threshold: If the average >= yellowThreshold, turn on the Yellow LED.
-Green Threshold: If the average >= greenThreshold, turn on the Green LED.
-No Water Detected: If the average is below all thresholds, turn off all indicators.
 Delay
-
-Add a short delay (100ms) to allow sensor readings to stabilize before the next iteration.
+-Add a short delay (100ms) to allow sensor readings to stabilize before the next iteration.
