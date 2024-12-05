@@ -6,13 +6,6 @@ Designed as a foundational device to address flooding risks in a residential set
 
 Flooding is a recurring issue in many areas, especially during heavy rain or typhoon season. Uncontrolled water infiltration in households can cause costly damage and create safety hazards. A real-time alert system could minimize losses and enhance preparedness.
 
-# Relevance
-(SDG) 11: Sustainable Cities and Communities:
-The project promotes disaster resilience and safe living environments. By notifying households about rising water levels, this project helps build resilience against environmental risks.
-
-Local Impact: 
-Flood-prone areas stand to benefit directly from this system as it empowers individuals and families to take action in the face of potential flooding, reducing the severity of damages and enhancing community readiness.
-
 # Component Used
 * Arduino uno R3
 * Breadboard
