@@ -20,3 +20,6 @@ Flood-prone areas stand to benefit directly from this system as it empowers indi
 * Buzzer
 * Jumper wires
 * Water level sensor
+
+# Circuit Diagram
+![462582020_449684464522142_4666216168939983918_n](https://github.com/user-attachments/assets/a7ccf045-6ac7-4d98-804c-770d822ddebd)
