@@ -6,7 +6,6 @@ Hardware Requirements:
 -Water level sensor
 -3 LEDs (Green, Yellow, Red)
 -Buzzer
--Resistors (as required for LEDs)
 -jumper wires
 -Breadboard 
 
@@ -26,29 +25,3 @@ Thresholds:
 Averaging Setup:
 -numReadings (10): Number of sensor readings averaged for more stable output.
   
-Variables
--readings[numReadings]: Array to store sensor values.
--readIndex: Tracks the current index in the readings array.
--total: Stores the sum of all sensor readings.
--average: Calculates the average sensor reading.
-  
-Workflow
-1. Setup Phase
--Initialize all LEDs and the buzzer as output pins.
--Set up the readings array with initial values of 0.
--Start the serial communication for debugging.
-
-2. Main Loop
--Read sensor data from the water level sensor (analogRead(A0)).
--Update the readings array and calculate a moving average for smoother sensor values.
--Print the averaged value to the serial monitor for debugging.
-
-3. LED and Buzzer Logic
-- Compare the average sensor value with the thresholds:
--Red Threshold: If the average >= redThreshold, turn on the Red LED and buzzer.
--Yellow Threshold: If the average >= yellowThreshold, turn on the Yellow LED.
--Green Threshold: If the average >= greenThreshold, turn on the Green LED.
--No Water Detected: If the average is below all thresholds, turn off all indicators.
-
-Delay
--Add a short delay (100ms) to allow sensor readings to stabilize before the next iteration.
